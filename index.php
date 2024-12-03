@@ -1,4 +1,8 @@
 <?php
+// Verifica a existencia do arquivo setup.php
+if (file_exists(__DIR__ . '/setup.php')) {
+    die('O sistema já está configurado. Apague o arquivo "setup.php" da pasta raiz.');
+}
 session_start();
 if (isset($_SESSION['username'])) {
     header("Location: /hdmjbo/pages/painel.php");
