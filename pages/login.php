@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($user && password_verify($password, $user['senha_usuario'])) {
         $_SESSION['username'] = $username;
-        header("Location: /hdmjbo/pages/painel.php"); // Redireciona para o painel
+        header("Location: /hdmjbo/pages/dashboard.php"); // Redireciona para o painel
         exit;
     } else {
         $error = "Usuário ou senha inválidos.";

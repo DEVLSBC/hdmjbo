@@ -5,7 +5,7 @@ if (file_exists(__DIR__ . '/setup.php')) {
 }
 session_start();
 if (isset($_SESSION['username'])) {
-    header("Location: /hdmjbo/pages/painel.php");
+    header("Location: /hdmjbo/pages/dashboard.php");
     exit;
 }
 include 'includes/header.php';
