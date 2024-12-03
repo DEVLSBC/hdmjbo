@@ -1,0 +1,12 @@
+# Redireciona para HTTPS (se aplicável)
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Bloquear acesso direto à pasta `includes`
+<Directory "includes">
+    Deny from all
+</Directory>
+
+# Redirecionar erros 404
+ErrorDocument 404 /index.php
