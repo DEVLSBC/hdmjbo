@@ -26,7 +26,7 @@ include '../includes/header.php';
 
 			<hr>
 		</header>
-		<section>
+		<section class="dash_modulos">
 			<div>
 				<?php
 					if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'admin') {
