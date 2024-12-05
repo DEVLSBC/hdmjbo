@@ -289,7 +289,9 @@ footer {
 .dash_modulos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: left;
   align-items: start;
   padding: 2rem;
   margin-top: 9rem;

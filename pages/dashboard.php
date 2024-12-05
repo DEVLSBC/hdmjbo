@@ -34,6 +34,12 @@ include '../includes/header.php';
 					}
 				?>
 			</div>
+			<div>
+				<a href="#" class="btn-cadastro">Botão 2</a>
+			</div>
+			<div>
+				<a href="#" class="btn-cadastro">Botão 3</a>
+			</div>
 		</section>
 		<!-- Rodape da página -->
 		<footer>
