@@ -167,6 +167,63 @@ button:hover {
   background-color: var(--corprincipal2);
 }
 
+.dashboard {
+  background-color: var(--corfundo) !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  padding: var(--spacing);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.dash_header_logo {
+  height: 130px;
+}
+
+.dash_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash_header h1 {
+  font-size: 24px;
+  margin-right: -10rem;
+}
+
+.dash_sair_button {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--corletra);
+  margin-right: 5rem;
+  margin-left: -10rem;
+  background-color: var(--corprincipal2);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--corfundo);
+  font-weight: bold;
+}
+
+footer {
+  padding: var(--spacing);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.dash_footer {
+  font-size: 18px;
+  padding: 1rem;
+}
+
 
 /* Responsividade */
 @media (max-width: 600px) {
