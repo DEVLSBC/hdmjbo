@@ -167,6 +167,7 @@ button:hover {
   background-color: var(--corprincipal2);
 }
 
+/* Dashboard */
 .dashboard {
   background-color: var(--corfundo) !important;
   position: fixed;
@@ -195,7 +196,6 @@ header {
 
 .dash_header h1 {
   font-size: 24px;
-  margin-right: -10rem;
 }
 
 .dash_sair_button {
@@ -222,6 +222,68 @@ footer {
 .dash_footer {
   font-size: 18px;
   padding: 1rem;
+}
+
+/* Botão cadastro usuário */
+.btn-cadastro {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #199B91;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-cadastro:hover {
+  background-color: #1ed1c2;
+  transition: background-color 0.3s;
+}
+
+.cadastro_body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro_titulo{
+  text-align: center;
+}
+
+.cadastro_form {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro_form .cadastro_label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cadastro_form .cadastro_input, .cadastro_form select, .cadastro_form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.cadastro_form button {
+  background-color: #199B91;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.cadastro_form button:hover {
+  background-color: #1ed1c2;
 }
 
 

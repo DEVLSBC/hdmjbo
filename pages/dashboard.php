@@ -26,6 +26,15 @@ include '../includes/header.php';
 
 			<hr>
 		</header>
+		<section>
+			<div>
+				<?php
+					if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'admin') {
+						echo '<a href="cadastro.php" class="btn-cadastro">Cadastrar Usuário</a>';
+					}
+				?>
+			</div>
+		</section>
 		<!-- Rodape da página -->
 		<footer>
 			<hr>
