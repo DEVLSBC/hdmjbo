@@ -201,10 +201,9 @@ header {
 .dash_sair_button {
   font-size: 20px;
   text-decoration: none;
-  color: var(--corletra);
   margin-right: 5rem;
   margin-left: -10rem;
-  background-color: var(--corprincipal2);
+  background-color: var(--corprincipal);
   border-radius: 10px;
   padding: 1rem;
   color: var(--corfundo);
@@ -223,9 +222,9 @@ footer {
   font-size: 18px;
   padding: 1rem;
 }
-
 /* Botão cadastro usuário */
-.btn-cadastro {
+/* 
+.btn-dashboard {
   display: inline-block;
   padding: 10px 20px;
   background-color: #199B91;
@@ -235,16 +234,73 @@ footer {
   font-weight: bold;
 }
 
-.btn-cadastro:hover {
+.btn-dashboard:hover {
   background-color: #1ed1c2;
   transition: background-color 0.3s;
+} */
+
+/* Estilo do botão de "Cadastrar Usuário" */
+.btn-dashboard {
+  display: block;
+  width: 140px;
+  height: 200px;
+  background-color: #f4ebf9; /* Fundo lilás claro */
+  border: 1px solid #000; /* Borda preta */
+  border-radius: 20px; /* Cantos arredondados */
+  text-align: center;
+  text-decoration: none;
+  color: black; /* Cor do texto */
+  font-weight: bold;
+  margin: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+  overflow: hidden; /* Evita transbordamento */
+  position: relative; /* Para alinhar o ícone */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.btn-dashboard:hover {
+  transform: scale(1.05); /* Aumenta o botão no hover */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+}
+
+/* Ícone no botão */
+.btn-dashboard .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000; /* Cor preta do ícone */
+  margin: 20px auto;
+}
+
+.btn-dashboard hr {
+  margin-top: 40%;
+}
+
+.btn-dashboard span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  bottom: auto;
+}
+
 
 .cadastro_body{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cadastro_body a {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 .cadastro_titulo{
@@ -315,8 +371,7 @@ footer {
   .dash_sair_button{
     font-size: 20px;
     text-decoration: none;
-    color: var(--corletra);
-    background-color: var(--corprincipal2);
+    background-color: var(--corprincipal);
     border-radius: 10px;
     padding: 1rem;
     color: var(--corfundo);

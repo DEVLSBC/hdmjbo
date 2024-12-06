@@ -30,15 +30,38 @@ include '../includes/header.php';
 			<div>
 				<?php
 					if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'admin') {
-						echo '<a href="cadastro.php" class="btn-cadastro">Cadastrar Usuário</a>';
+						echo '<a href="cadastro.php" class="btn-dashboard">
+								<div class="icon"></div>
+								<hr>
+								<span>CADASTRAR USUÁRIO</span>
+								</a>
+								';
 					}
 				?>
 			</div>
 			<div>
-				<a href="#" class="btn-cadastro">Botão 2</a>
+				<?php
+					if (isset($_SESSION['cargo'])) {
+						echo '<a href="http://172.30.57.89/suportehdmjbo/" class="btn-dashboard" target="_blank">
+								<div class="icon"></div>
+								<hr>
+								<span>SUPORTE HDMJBO</span>
+								</a>
+								';
+					}
+				?>
 			</div>
 			<div>
-				<a href="#" class="btn-cadastro">Botão 3</a>
+				<?php
+					if (isset($_SESSION['cargo'])) {
+						echo '<a href="http://172.30.57.89/hdmjbo/" class="btn-dashboard" target="_blank">
+								<div class="icon"></div>
+								<hr>
+								<span>ATALHOS DOS SETORES</span>
+								</a>
+								';
+					}
+				?>
 			</div>
 		</section>
 		<!-- Rodape da página -->
