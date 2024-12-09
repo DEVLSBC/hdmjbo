@@ -7,17 +7,18 @@ session_start();
 require __DIR__ . '/../includes/db.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = trim($_POST['username']);
+    $cpf = preg_replace('/\D/', '', $_POST['cpf']); // Retira tudo que não seja número
     $password = trim($_POST['password']);
 
     // Consulta ao banco
-    $stmt = $conn->prepare("SELECT senha_usuario, cargo FROM hdmjbo_usuarios WHERE nome_usuario = :username");
-    $stmt->bindParam(':username', $username);
+    $stmt = $conn->prepare("SELECT nome_usuario, senha_usuario, cargo FROM hdmjbo_usuarios WHERE cpf_usuario = :cpf");
+    $stmt->bindParam(':cpf', $cpf);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['senha_usuario'])) {
-        $_SESSION['username'] = $username;
+        $_SESSION['cpf'] = $cpf;
+        $_SESSION['username'] = $user['nome_usuario'];
         $_SESSION['cargo'] = $user['cargo'];
         header("Location: /hdmjbo/pages/dashboard.php"); // Redireciona para o painel
         exit;

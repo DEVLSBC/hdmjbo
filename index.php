@@ -4,7 +4,7 @@ if (file_exists(__DIR__ . '/setup.php')) {
     die('O sistema já está configurado. Apague o arquivo "setup.php" da pasta raiz.');
 }
 session_start();
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['cpf'])) {
     header("Location: /hdmjbo/pages/dashboard.php");
     exit;
 }
@@ -22,9 +22,13 @@ include 'includes/header.php';
 
                 <form class="inputLogin" action="./pages/login.php" method="POST" autocomplete="off">
                     <!-- Campo de login -->
-                    <div class="boxLogin">
+                    <!-- <div class="boxLogin">
                         <label for="username">Usuário</label>
                         <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                    </div> -->
+                    <div class="boxLogin">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required oninput="formatCPF(this)">
                     </div>
 
                     <!-- Campo de senha -->
