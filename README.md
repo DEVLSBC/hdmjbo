@@ -43,13 +43,14 @@ hdmjbo/
 - MySQL 5.7+
 
 ## 📝 Instalação
-1. Clone este repositório:
+1. Clone este repositório ou faça o download do .zip:
 
 ```bash
 git clone https://github.com/DEVLSBC/hdmjbo.git
 ```
 2. Configure o banco de dados:
     - **APAGUE** o arquivo db.php da pasta includes
-    - Utilize o arquivo setup.php para configurar o banco de dados. **APAGUE** o arquivo setup.php após configuração
+    - Inicie o servidor local e acesse o projeto em http://localhost/hdmjbo/setup.php
+    - Configure o banco de dados. **APAGUE** o arquivo setup.php após configuração
 
-3. Inicie o servidor local e acesse o projeto em http://localhost/hdmjbo/setup.php.
+3. **APAGUE** o arquivo setup.php após configuração e acesse o projeto em http://localhost/hdmjbo/
