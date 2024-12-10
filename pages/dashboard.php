@@ -16,14 +16,11 @@ include '../includes/header.php';
 						<img class="dash_header_logo" src="/hdmjbo/assets/imagens/LOGO.png" alt="Logo da Prefeitura de Fortaleza">
 					</div>
 					<div></div>
-					<div>
+					<div class="dash_header_nome_sair">
 						<h1><?php echo "Bem-vindo(a), " . htmlspecialchars($_SESSION['username']) . "!";?></h1>
-					</div>
-					<div>
 						<a class="dash_sair_button" href='/hdmjbo/pages/logout.php'>Sair</a>						
 					</div>
 				</div>
-
 			<hr>
 		</header>
 		<section class="dash_modulos">

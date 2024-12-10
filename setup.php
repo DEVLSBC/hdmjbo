@@ -46,15 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conn->query("
             CREATE TABLE IF NOT EXISTS hdmjbo_usuarios (
                 id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-                nome_usuario VARCHAR(50) NOT NULL UNIQUE,
+                nome_usuario VARCHAR(50) NOT NULL,
                 cpf_usuario VARCHAR(11) NOT NULL UNIQUE,
                 senha_usuario VARCHAR(255) NOT NULL,
                 cargo ENUM('admin', 'chefe', 'user') DEFAULT 'user',
+                setor_usuario VARCHAR(50) NOT NULL,
                 data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ");
 
-        $stmt = $conn->prepare("INSERT INTO hdmjbo_usuarios (cpf_usuario, nome_usuario, senha_usuario, cargo) VALUES (?, ?, ?, 'admin')");
+        $stmt = $conn->prepare("INSERT INTO hdmjbo_usuarios (cpf_usuario, nome_usuario, senha_usuario, setor_usuario, cargo) VALUES (?, ?, ?, 'ti', 'admin')");
         $stmt->bind_param('sss', $admin_cpf, $admin_user, $admin_password);
         $stmt->execute();
 

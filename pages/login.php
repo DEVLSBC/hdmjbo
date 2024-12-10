@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = trim($_POST['password']);
 
     // Consulta ao banco
-    $stmt = $conn->prepare("SELECT nome_usuario, senha_usuario, cargo FROM hdmjbo_usuarios WHERE cpf_usuario = :cpf");
+    $stmt = $conn->prepare("SELECT nome_usuario, senha_usuario, cargo, setor_usuario FROM hdmjbo_usuarios WHERE cpf_usuario = :cpf");
     $stmt->bindParam(':cpf', $cpf);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['cpf'] = $cpf;
         $_SESSION['username'] = $user['nome_usuario'];
         $_SESSION['cargo'] = $user['cargo'];
+        $_SESSION['setor'] = $user['setor_usuario'];
         header("Location: /hdmjbo/pages/dashboard.php"); // Redireciona para o painel
         exit;
     } else {

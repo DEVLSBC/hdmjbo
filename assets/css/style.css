@@ -187,6 +187,14 @@ header {
   height: 130px;
 }
 
+.dash_header_nome_sair {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3rem;
+}
+
 .dash_header {
   display: flex;
   flex-direction: row;
@@ -201,8 +209,7 @@ header {
 .dash_sair_button {
   font-size: 20px;
   text-decoration: none;
-  margin-right: 5rem;
-  margin-left: -10rem;
+  margin-left: 2rem;
   background-color: var(--corprincipal);
   border-radius: 10px;
   padding: 1rem;

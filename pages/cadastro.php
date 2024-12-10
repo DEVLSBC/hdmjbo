@@ -29,15 +29,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_cpf = preg_replace('/\D/', '', $_POST['cpf']); // Remove tudo que não for número
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     $cargo = htmlspecialchars($_POST['cargo']);
+    $setor = htmlspecialchars($_POST['setor']);
 
     if (!validarCPF($user_cpf)) {
         die("CPF inválido. Por favor, insira um CPF válido.");
     }
 
     try {
-        $sql = "INSERT INTO hdmjbo_usuarios (nome_usuario, cpf_usuario, senha_usuario, cargo) VALUES (:nome, :cpf, :senha, :cargo)";
+        $sql = "INSERT INTO hdmjbo_usuarios (nome_usuario, cpf_usuario, senha_usuario, cargo, setor_usuario) VALUES (:nome, :cpf, :senha, :cargo, :setor)";
         $stmt = $conn->prepare($sql);
-        $stmt->execute(['nome' => $nome, 'cpf' => $user_cpf, 'senha' => $senha, 'cargo' => $cargo]);
+        $stmt->execute(['nome' => $nome, 'cpf' => $user_cpf, 'senha' => $senha, 'cargo' => $cargo, 'setor' => $setor]);
         echo  "<script>alert('Usuário cadastrado com sucesso!');</script>";
         header('Location: dashboard.php');
     } catch (PDOException $e) {
@@ -70,9 +71,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="senha" class="cadastro_label">Senha do Usuário:</label>
         <input class="cadastro_input" type="password" id="senha" name="senha" required>
 
+        <label for="setor" class="cadastro_label">Setor do Usuário:</label>
+        <select id="setor" name="setor" required>
+            <option value="cleitos">Central de Leitos</option>
+            <option value="daf">DAF</option>
+            <option value="farmacia">Farmacia</option>
+            <option value="faturamento">Faturamento</option>
+            <option value="unipe">Unipe</option>
+            <option value="acolhimento">Acolhimento</option>
+        </select>
+
         <label for="cargo" class="cadastro_label">Cargo do Usuário:</label>
         <select id="cargo" name="cargo" required>
-            <!-- <option value="admin">Admin</option> -->
             <option value="chefe">Chefe</option>
             <option value="user">Usuário</option>
         </select>
