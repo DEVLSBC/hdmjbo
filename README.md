@@ -51,6 +51,6 @@ git clone https://github.com/DEVLSBC/hdmjbo.git
 2. Configure o banco de dados:
     - **APAGUE** o arquivo db.php da pasta includes
     - Inicie o servidor local e acesse o projeto em http://localhost/hdmjbo/setup.php
-    - Configure o banco de dados. **APAGUE** o arquivo setup.php após configuração
+    - Configure o banco de dados.
 
 3. **APAGUE** o arquivo setup.php após configuração e acesse o projeto em http://localhost/hdmjbo/
