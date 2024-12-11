@@ -19,11 +19,14 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="icon" href="../assets/imagens/favicon.png">
     <title>Gerenciamento de Usuários</title>
 </head>
-<body>
-    <a href="dashboard.php">Voltar</a>
-    <h1>Gerenciar Usuários</h1>
-    <a href="cadastro.php">Cadastrar Novo Usuário</a>
-    <table border="1">
+<body class="usuarios_Dash">
+    <div class="usuarios_Header">
+        <a href="dashboard.php">Voltar</a>
+        <h1 class="usuarios_Titulo">Gerenciar Usuários</h1>
+        <a class="usuarios_Cadastrar" href="cadastro.php">Cadastrar Usuário</a>
+    </div>
+    <hr>
+    <table border="1" class="usuarios_Tabela">
         <tr>
             <th>Nome</th>
             <th>CPF</th>
@@ -39,7 +42,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?= htmlspecialchars($usuario['setor_usuario']) ?></td>
                 <td>
                     <a href="editar_usuario.php?id_usuario=<?= $usuario['id_usuario'] ?>">Editar</a>
-                    <a href="deletar_usuario.php?id_usuario=<?= $usuario['id_usuario'] ?>" onclick="return confirm('Tem certeza que deseja excluir este usuário?')">Excluir</a>
+                    <a class="usuarios_Excluir" href="deletar_usuario.php?id_usuario=<?= $usuario['id_usuario'] ?>" onclick="return confirm('Tem certeza que deseja excluir este usuário?')">Excluir</a>
                 </td>
             </tr>
         <?php endforeach; ?>

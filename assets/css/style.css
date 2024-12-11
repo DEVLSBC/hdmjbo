@@ -299,7 +299,7 @@ footer {
   align-items: center;
 }
 
-.cadastro_body a {
+body .voltar_button_usuario {
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
@@ -359,6 +359,52 @@ footer {
   padding: 2rem;
   margin-top: 9rem;
   height: calc(100vh - 210px);
+}
+
+.usuarios_Dash {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--corfundo);
+}
+
+.usuarios_Dash a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--corletra);
+}
+
+.usuarios_Tabela {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.usuarios_Tabela th, td {
+  text-align: center;
+}
+
+.usuarios_tabela_titulo {
+  text-align: center !important;
+}
+
+.usuarios_Tabela td {
+  font-size: 20px;
+}
+
+.usuarios_Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.usuarios_Excluir {
+  color: #ff0000bd !important;
+  font-weight: bold;
+}
+
+.usuarios_Cadastrar {
+  width: 5rem;
+  text-align: center;
 }
 
 /* Responsividade */

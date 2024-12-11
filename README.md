@@ -31,6 +31,10 @@ hdmjbo/
 ├── pages/
 │   ├── login.php
 │   ├── dashboard.php
+│   ├── cadastro.php
+│   ├── deletar_usuario.php
+│   ├── editar_usuario.php
+│   ├── usuarios.php
 │   └── logout.php
 ├── README.md
 ├── setup.php

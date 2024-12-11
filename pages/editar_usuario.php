@@ -83,6 +83,7 @@ function validarCPF($cpf) {
     <title>Editar Usuário</title>
 </head>
 <body>
+    <a class="voltar_button_usuario" href="usuarios.php">Voltar</a>
     <?php if (isset($erro)) echo "<p style='color: red;'>$erro</p>"; ?>
     <form method="POST" action="" class="cadastro_form">
         <h1 class="cadastro_titulo">Editar Usuário</h1>

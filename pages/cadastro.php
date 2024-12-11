@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body class="cadastro_body">
-    <a href="dashboard.php">Voltar</a>
+    <a class="voltar_button_usuario" href="usuarios.php">Voltar</a>
     <form method="POST" action="" class="cadastro_form">
         <h1 class="cadastro_titulo">Cadastro de Usuário</h1>
         <label for="nome" class="cadastro_label">Nome do Usuário:</label>
