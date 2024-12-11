@@ -27,10 +27,10 @@ include '../includes/header.php';
 			<div>
 				<?php
 					if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'admin') {
-						echo '<a href="cadastro.php" class="btn-dashboard">
+						echo '<a href="usuarios.php" class="btn-dashboard">
 								<div class="icon"></div>
 								<hr>
-								<span>CADASTRAR USUÁRIO</span>
+								<span>GERENCIAMENTO DE USUÁRIO</span>
 								</a>
 								';
 					}

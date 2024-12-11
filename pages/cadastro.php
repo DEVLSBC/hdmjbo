@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/imagens/favicon.png">
-    <title>Cadastro de Usuário</title>
+    <title>Cadastrar Usuário</title>
 </head>
 
 <body class="cadastro_body">
@@ -90,5 +90,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Cadastrar</button>
     </form>
 </body>
-<script src="/hdmjbo/assets/js/app.js"></script>
+<script src="../assets/js/app.js"></script>
 </html>
