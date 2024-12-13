@@ -32,7 +32,8 @@ hdmjbo/
 │   ├── login.php
 │   ├── dashboard.php
 │   ├── cadastro.php
-│   ├── deletar_usuario.php
+│   ├── habilitar_usuario.php
+│   ├── desabilitar_usuario.php
 │   ├── editar_usuario.php
 │   ├── usuarios.php
 │   └── logout.php
