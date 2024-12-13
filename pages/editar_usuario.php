@@ -5,6 +5,7 @@ if ($_SESSION['cargo'] !== 'admin') {
 }
 
 require '../includes/db.php';
+require '../includes/functions.php';
 
 // Obtém o ID do usuário para edição
 $id_usuario = $_GET['id_usuario'] ?? null;
@@ -52,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql .= " WHERE id_usuario = :id_usuario";
         $stmt = $conn->prepare($sql);
         $stmt->execute($params);
-
+        registrarLog($conn, $_SESSION['id_usuario'], "Editou o usuário com ID {$_GET['id_usuario']}.");
         header('Location: usuarios.php');
         exit();
     }

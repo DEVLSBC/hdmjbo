@@ -24,6 +24,7 @@ function validarCPF($cpf) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require '../includes/db.php';
+    require '../includes/functions.php';
 
     $nome = htmlspecialchars($_POST['nome']);
     $user_cpf = preg_replace('/\D/', '', $_POST['cpf']); // Remove tudo que não for número
@@ -39,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO hdmjbo_usuarios (nome_usuario, cpf_usuario, senha_usuario, cargo, setor_usuario) VALUES (:nome, :cpf, :senha, :cargo, :setor)";
         $stmt = $conn->prepare($sql);
         $stmt->execute(['nome' => $nome, 'cpf' => $user_cpf, 'senha' => $senha, 'cargo' => $cargo, 'setor' => $setor]);
-        echo  "<script>alert('Usuário cadastrado com sucesso!');</script>";
+        registrarLog($conn, $_SESSION['id_usuario'], "Cadastrou o usuário com CPF {$user_cpf}.");
         header('Location: dashboard.php');
     } catch (PDOException $e) {
         echo "Erro ao cadastrar: " . $e->getMessage();

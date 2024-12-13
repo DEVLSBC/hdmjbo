@@ -5,6 +5,7 @@ if ($_SESSION['cargo'] !== 'admin') {
 }
 
 require '../includes/db.php';
+require '../includes/functions.php';
 
 $id_usuario = $_GET['id_usuario'] ?? null;
 if ($id_usuario) {
@@ -13,6 +14,7 @@ if ($id_usuario) {
     $stmt->execute();
 }
 
+registrarLog($conn, $_SESSION['id_usuario'], "Desabilitou o usuário com ID {$_GET['id_usuario']}.");
 header('Location: usuarios.php');
 exit();
 ?>

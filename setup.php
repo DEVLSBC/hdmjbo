@@ -3,7 +3,8 @@ if (file_exists(__DIR__ . '/../includes/db.php')) {
     die('O sistema já está configurado. Remova o arquivo "db.php" para reconfigurar.');
 }
 
-function validarCPF($cpf) {
+function validarCPF($cpf)
+{
     $cpf = preg_replace('/[^0-9]/', '', $cpf);
     if (strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
         return false;
@@ -56,6 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             )
         ");
 
+        $conn->query("
+            CREATE TABLE IF NOT EXISTS hdmjbo_logs (
+                id_log INT AUTO_INCREMENT PRIMARY KEY,
+                id_usuario INT NOT NULL,
+                ip_address VARCHAR(45) NOT NULL,
+                atividade TEXT NOT NULL,
+                data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (id_usuario) REFERENCES hdmjbo_usuarios(id_usuario) ON DELETE CASCADE
+            )
+        ");
+
+
         $stmt = $conn->prepare("INSERT INTO hdmjbo_usuarios (cpf_usuario, nome_usuario, senha_usuario, setor_usuario, cargo) VALUES (?, ?, ?, 'ti', 'admin')");
         $stmt->bind_param('sss', $admin_cpf, $admin_user, $admin_password);
         $stmt->execute();
@@ -85,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="icon" href="/hdmjbo/assets/imagens/favicon.png">
     <title>Configuração do Sistema</title>
 </head>
+
 <body>
     <div class="setup-container">
         <h1>Instalação Sistema Interno</h1>
@@ -122,4 +137,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 <script src="/hdmjbo/assets/js/app.js"></script>
+
 </html>

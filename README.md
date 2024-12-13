@@ -27,6 +27,7 @@ hdmjbo/
 ├── includes/
 │   └── db.php
 │   ├── footer.php
+│   ├── functions.php
 │   └── header.php
 ├── pages/
 │   ├── login.php
@@ -36,6 +37,7 @@ hdmjbo/
 │   ├── desabilitar_usuario.php
 │   ├── editar_usuario.php
 │   ├── usuarios.php
+│   ├── logs.php
 │   └── logout.php
 ├── README.md
 ├── setup.php

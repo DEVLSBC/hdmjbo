@@ -432,6 +432,61 @@ thead {
   text-align: center;
 }
 
+
+.logs_admin {
+  width: 100%;
+  padding-top: 1.5rem;
+  border-collapse: collapse;
+}
+
+.logs_admin thead {
+  padding-bottom: 3rem;
+}
+
+.logs_admin th, td {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.logs_admin_titulo {
+  text-align: center !important;
+}
+
+.logs_admin td {
+  font-size: 20px;
+}
+
+.logs_Body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logs_Dash {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logs_Dash a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--corletra);
+}
+
+.logs_Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
   .login {

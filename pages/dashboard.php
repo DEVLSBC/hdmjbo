@@ -27,6 +27,18 @@ include '../includes/header.php';
 			<div>
 				<?php
 					if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'admin') {
+						echo '<a href="logs.php" class="btn-dashboard">
+								<div class="icon"></div>
+								<hr>
+								<span>LOGS DO SISTEMA</span>
+								</a>
+								';
+					}
+				?>
+			</div>
+			<div>
+				<?php
+					if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'admin') {
 						echo '<a href="usuarios.php" class="btn-dashboard">
 								<div class="icon"></div>
 								<hr>
