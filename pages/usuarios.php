@@ -52,11 +52,11 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             
                             <?php if ($usuario['ativo']): ?>
                                 <a href="desabilitar_usuario.php?id_usuario=<?= $usuario['id_usuario'] ?>" title="Desabilitar">
-                                    <i class="fas fa-user-slash"></i>
+                                    <i class="fas fa-user-check"></i>
                                 </a>
                             <?php else: ?>
                                 <a href="habilitar_usuario.php?id_usuario=<?= $usuario['id_usuario'] ?>" title="Habilitar">
-                                    <i class="fas fa-user-check"></i>
+                                    <i class="fas fa-user-slash"></i>
                                 </a>
                             <?php endif; ?>
                         </td>
