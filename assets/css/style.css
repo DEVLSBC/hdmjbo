@@ -6,6 +6,7 @@
   --corfundo: #ffffff;
   --corfundo2: #eeeeee;
   --corletra: #000000;
+  --corfundobotao: #f9f9f9;
   --spacing: 0.5rem;
 }
 
@@ -229,29 +230,13 @@ footer {
   font-size: 18px;
   padding: 1rem;
 }
-/* Botão cadastro usuário */
-/* 
-.btn-dashboard {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #199B91;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn-dashboard:hover {
-  background-color: #1ed1c2;
-  transition: background-color 0.3s;
-} */
 
 /* Estilo do botão de "Cadastrar Usuário" */
 .btn-dashboard {
   display: block;
   width: 140px;
   height: 200px;
-  background-color: #f4ebf9; /* Fundo lilás claro */
+  background-color: var(--corfundobotao); /* Fundo lilás claro */
   border: 1px solid #000; /* Borda preta */
   border-radius: 20px; /* Cantos arredondados */
   text-align: center;
@@ -290,7 +275,6 @@ footer {
   font-family: 'Roboto', sans-serif;
   bottom: auto;
 }
-
 
 .cadastro_body{
   height: 100vh;
@@ -361,10 +345,21 @@ body .voltar_button_usuario {
   height: calc(100vh - 210px);
 }
 
+.usuarios_Body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .usuarios_Dash {
-  width: 100%;
-  padding: 2rem;
-  background-color: var(--corfundo);
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .usuarios_Dash a {
@@ -376,10 +371,17 @@ body .voltar_button_usuario {
 .usuarios_Tabela {
   width: 100%;
   padding-top: 1.5rem;
+  border-collapse: collapse;
+}
+
+thead {
+  padding-bottom: 3rem;
 }
 
 .usuarios_Tabela th, td {
   text-align: center;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .usuarios_tabela_titulo {
@@ -388,6 +390,29 @@ body .voltar_button_usuario {
 
 .usuarios_Tabela td {
   font-size: 20px;
+}
+
+.usuarios_Tabela a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.usuarios_Tabela a:hover {
+  color: #007BFF; /* Cor no hover */
+}
+
+.usuarios_Tabela i {
+  font-size: 1.2rem;
+}
+
+
+.lista_usuarios_tabela {
+  border-bottom: 1px solid #ddd;
+}
+
+.lista_usuarios_tabela:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 .usuarios_Header {

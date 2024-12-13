@@ -91,7 +91,7 @@ function validarCPF($cpf) {
         <input type="text" id="nome_usuario" name="nome_usuario" value="<?= htmlspecialchars($usuario['nome_usuario']) ?>" required>
 
         <label for="cpf_usuario">CPF:</label>
-        <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" value="<?= htmlspecialchars($usuario['cpf_usuario']) ?>" required>
+        <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" value="<?= htmlspecialchars($usuario['cpf_usuario']) ?>" required oninput="formatCPF(this)">
 
         <label for="cargo">Cargo:</label>
         <select id="cargo" name="cargo" required>

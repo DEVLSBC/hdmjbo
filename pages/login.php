@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = trim($_POST['password']);
 
     // Consulta ao banco
-    $stmt = $conn->prepare("SELECT nome_usuario, senha_usuario, cargo, setor_usuario FROM hdmjbo_usuarios WHERE cpf_usuario = :cpf");
+    $stmt = $conn->prepare("SELECT nome_usuario, senha_usuario, cargo, setor_usuario FROM hdmjbo_usuarios WHERE cpf_usuario = :cpf AND ativo = 1");
     $stmt->bindParam(':cpf', $cpf);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);

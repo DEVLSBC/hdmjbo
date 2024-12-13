@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 senha_usuario VARCHAR(255) NOT NULL,
                 cargo ENUM('admin', 'chefe', 'user') DEFAULT 'user',
                 setor_usuario VARCHAR(50) NOT NULL,
+                ativo TINYINT(1) DEFAULT 1,
                 data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ");
