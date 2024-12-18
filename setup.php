@@ -68,6 +68,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             )
         ");
 
+        $conn->query("
+            CREATE TABLE IF NOT EXISTS hdmjbo_sga (
+                id_sga INT AUTO_INCREMENT PRIMARY KEY,
+                nome_sga VARCHAR(50) NOT NULL,
+                sala_sga VARCHAR(50) NOT NULL,
+                prio_sga VARCHAR(10) NOT NULL,
+                data_sga TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ");
+
 
         $stmt = $conn->prepare("INSERT INTO hdmjbo_usuarios (cpf_usuario, nome_usuario, senha_usuario, setor_usuario, cargo) VALUES (?, ?, ?, 'ti', 'admin')");
         $stmt->bind_param('sss', $admin_cpf, $admin_user, $admin_password);
