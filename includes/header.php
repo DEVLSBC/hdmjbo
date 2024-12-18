@@ -7,4 +7,4 @@
     <link rel="icon" href="/hdmjbo/assets/imagens/favicon.png">
     <title>Sistema Interno</title>
 </head>
-<body>
+<body onload="exibirErro('<?= $erro ?>')">

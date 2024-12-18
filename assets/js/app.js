@@ -5,3 +5,9 @@ function formatCPF(input) {
     value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço
     input.value = value; // Atualiza o valor do input
 }
+
+function exibirErro(mensagem) {
+    if (mensagem) {
+        alert(mensagem);
+    }
+}
